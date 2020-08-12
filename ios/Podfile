@@ -1,0 +1,48 @@
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+# Uncomment the next line to define a global platform for your project
+platform :ios, '11.0'
+
+# Convert all permission pods into static libraries
+pre_install do |installer|
+  installer.pod_targets.each do |pod|
+    if pod.name.eql?('RNPermissions') || pod.name.start_with?('Permission-')
+      def pod.build_type;
+        Pod::BuildType.static_library
+      end
+    end
+  end
+end
+
+def react_native_permissions
+  permissions_path = '../node_modules/react-native-permissions/ios'
+
+  pod 'Permission-Camera', :path => "#{permissions_path}/Camera.podspec"
+  pod 'Permission-Microphone', :path => "#{permissions_path}/Microphone.podspec"
+  pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary.podspec"
+end
+
+target 'Xcode12ReactNativeSample' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Xcode12ReactNativeSample
+
+  config = use_native_modules!
+  use_react_native!(:path => config["reactNativePath"])
+
+  react_native_permissions
+
+  target 'Xcode12ReactNativeSampleTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Xcode12ReactNativeSampleUITests' do
+    # Pods for testing
+  end
+
+end

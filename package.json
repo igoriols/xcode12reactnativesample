@@ -1,0 +1,22 @@
+{
+  "name": "Xcode12Project",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": ""
+  },
+  "dependencies": {
+    "@react-native-community/async-storage": "1.11.0",
+    "@react-native-community/netinfo": "5.9.5",
+    "react": "16.13.1",
+    "react-native": "0.63.2",
+    "react-native-gesture-handler": "1.7.0",
+    "react-native-permissions": "2.1.5",
+    "react-native-reanimated": "1.12.0",
+    "react-native-safe-area-context": "3.1.4",
+    "react-native-screens": "2.10.1",
+    "react-native-share": "3.7.0",
+    "react-native-webview": "10.4.0",
+    "rn-fetch-blob": "0.12.0"
+  }
+}

@@ -1,0 +1,45 @@
+# OSX
+#
+.DS_Store
+
+# Xcode
+#
+# Build generated
+ios/Xcode12ReactNativeSample/build/
+ios/Xcode12ReactNativeSample/build/
+ios/Xcode12ReactNativeSample/DerivedData/
+# Various settings
+ios/Xcode12ReactNativeSample/*.pbxuser
+ios/Xcode12ReactNativeSample/!default.pbxuser
+ios/Xcode12ReactNativeSample/*.mode1v3
+ios/Xcode12ReactNativeSample/!default.mode1v3
+ios/Xcode12ReactNativeSample/*.mode2v3
+ios/Xcode12ReactNativeSample/!default.mode2v3
+ios/Xcode12ReactNativeSample/*.perspectivev3
+ios/Xcode12ReactNativeSample/!default.perspectivev3
+ios/Xcode12ReactNativeSample/xcuserdata/
+# Other
+ios/Xcode12ReactNativeSample/*.xccheckout
+ios/Xcode12ReactNativeSample/*.moved-aside
+ios/Xcode12ReactNativeSample/*.xcscmblueprint
+# Obj-C/Swift specific
+ios/Xcode12ReactNativeSample/*.hmap
+ios/Xcode12ReactNativeSample/*.ipa
+*.dSYM.zip
+ios/Xcode12ReactNativeSample/*.dSYM
+
+# XCode User Data
+ios/Xcode12ReactNativeSample.xcodeproj/project.xcworkspace/*.xcworkspacedata
+ios/Xcode12ReactNativeSample.xcworkspace/xcuserdata/*
+ios/Xcode12ReactNativeSample.xcodeproj/project.xcworkspace/xcuserdata/*
+ios/Xcode12ReactNativeSample.xcodeproj/xcuserdata/*
+ios/Xcode12ReactNativeSample.xcworkspace/*.xcworkspacedata
+
+# node.js
+#
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# CocoaPods
+/ios/Pods/
